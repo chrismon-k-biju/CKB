@@ -1,0 +1,89 @@
+body {
+    background-color: #000926;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Slider container to hold the absolutely positioned slides */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 370px;
+    margin-top: 50px;
+}
+
+/* Stacked slides styled with absolute positioning */
+.slider > div {
+    position: absolute;
+    width: 240px;
+    height: 310px;
+    left: calc(50% - 120px);
+    top: 0;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Slide background positioning and formatting */
+#item1, #item2, #item3, #item4, #item5 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Relative background image assets */
+#item1 {
+    background-image: url('../design/Pope Leo XIV.png');
+}
+
+#item2 {
+    background-image: url('../design/Beyond the Stars.png');
+}
+
+#item3 {
+    background-image: url('../design/MD Session.png');
+}
+
+#item4 {
+    background-image: url('../design/Pusthaka Chirakukal.png');
+}
+
+#item5 {
+    background-image: url('../design/Rosary Month.png');
+}
+
+/* Control buttons below the slider container */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    z-index: 10;
+}
+
+.nav-buttons button {
+    background-color: #0172AF;
+    border: 1px solid #0172AF;
+    color: #000926;
+    font-size: 20px;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(1, 114, 175, 0.3);
+}
+
+.nav-buttons button:hover {
+    background-color: transparent;
+    color: #7cbce8;
+    border-color: #7cbce8;
+    box-shadow: 0 0 15px rgba(124, 188, 232, 0.5);
+    transform: scale(1.1);
+}
